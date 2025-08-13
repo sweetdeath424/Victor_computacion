@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    border: 3px solid blue; /* borde azul como en el diagrama */
+}
+
+/* Header */
+.header {
+    display: flex;
+    background-color: #bfbfbf; /* gris header */
+    height: 60px;
+}
+
+.logo {
+    background-color: #f4b400; /* amarillo logo */
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.titulo-header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador {
+    background-color: #d9d9d9; /* gris claro buscador */
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido principal */
+.contenido {
+    display: flex;
+    min-height: 300px;
+}
+
+.sidebar {
+    background-color: #e6b8b7; /* rosado sidebar */
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+    background-color: #92d050; /* verde content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    background-color: #f4b400; /* amarillo footer */
+    height: 100px;
+}
+
+.footer-main {
+    background-color: transparent;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.footer-box {
+    background-color: #bfbfbf; /* gris footers pequeños */
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
