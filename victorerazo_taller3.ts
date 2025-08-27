@@ -1,18 +1,19 @@
 // ---------------- Parte 1 ----------------
-// Definición de una interfaz para Direccion
+
+// Definición de interfaz Direccion
 interface Direccion { 
   calle: string; 
   ciudad: string; 
   pais: string; 
-}
+} 
 
-// Definición de una interfaz para Estudiante
+// Definición de interfaz Estudiante
 interface Estudiante { 
   nombre: string; 
   curso: string; 
   direccion: Direccion; 
   mostrarInfo: () => string; 
-}
+} 
 
 const estudiante: Estudiante = { 
   nombre: "Juan", 
@@ -23,22 +24,20 @@ const estudiante: Estudiante = {
     pais: "Colombia", 
   }, 
   mostrarInfo() { 
-    // Uso de this para acceder a propiedades dentro del objeto
     return `${this.nombre} estudia ${this.curso} en ${this.direccion.ciudad}`; 
   } 
-};
+}; 
 
-console.log(estudiante.mostrarInfo());
+console.log(estudiante.mostrarInfo()); 
 
-
-// Definición de una interfaz para Producto
+// Definición de interfaz Producto
 interface Producto { 
   id: number; 
   nombre: string; 
   precio: number; 
   stock: number; 
   mostrarDetalle: () => string; 
-}
+} 
 
 const producto: Producto = { 
   id: 1, 
@@ -48,19 +47,18 @@ const producto: Producto = {
   mostrarDetalle() { 
     return `El producto ${this.nombre} cuesta ${this.precio} y hay ${this.stock} unidades disponibles`; 
   } 
-};
+}; 
 
-console.log(producto.mostrarDetalle());
+console.log(producto.mostrarDetalle()); 
 
-
-// Definición de una interfaz para Pelicula
+// Definición de interfaz Pelicula
 interface Pelicula { 
   titulo: string; 
   director: string; 
   duracion: number; 
   genero: string; 
   reproducir: () => string; 
-}
+} 
 
 const pelicula: Pelicula = { 
   titulo: "Avengers: Endgame", 
@@ -70,18 +68,17 @@ const pelicula: Pelicula = {
   reproducir() { 
     return `Reproduciendo: ${this.titulo} - Dirigida por ${this.director}`; 
   } 
-};
+}; 
 
-console.log(pelicula.reproducir());
+console.log(pelicula.reproducir()); 
 
-
-// Definición de una interfaz para Vehiculo
+// Definición de interfaz Vehiculo
 interface Vehiculo { 
   marca: string; 
   modelo: string; 
   año: number; 
   encender: () => string; 
-}
+} 
 
 const vehiculo: Vehiculo = { 
   marca: "Toyota", 
@@ -90,18 +87,17 @@ const vehiculo: Vehiculo = {
   encender() { 
     return `El auto ${this.marca} ${this.modelo} está encendido`; 
   } 
-};
+}; 
 
-console.log(vehiculo.encender());
+console.log(vehiculo.encender()); 
 
-
-// Definición de una interfaz para Usuario
+// Definición de interfaz Usuario
 interface Usuario { 
   username: string; 
   password: string; 
   roles: string[]; 
   loguear: () => string; 
-}
+} 
 
 const usuario: Usuario = { 
   username: "admin", 
@@ -110,22 +106,18 @@ const usuario: Usuario = {
   loguear() { 
     return `El usuario ${this.username} ha iniciado sesión con roles: ${this.roles.join(", ")}`; 
   } 
-};
+}; 
 
-console.log(usuario.loguear());
-
+console.log(usuario.loguear()); 
 
 // ---------------- Parte 2 ----------------
 
-// Error: el tipo está mal escrito ("truue")
+// Error: el tipo estaba mal escrito ("truue")
 // Corrección: usar boolean
-let myValue: number | string | true = 10;  
 let myValue2: number | string | boolean = 10;  
 
 // Error: asignando un string a un boolean
-let myBoolean: Boolean = true;  
-// Correcto sería boolean en minúscula
-// let myBoolean: boolean = "true";  
+let myBoolean: boolean = true;  
 
 // let mathPiPoint: number = 3.14; // (no debe ser string)
 
