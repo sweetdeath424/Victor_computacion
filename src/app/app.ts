@@ -1,11 +1,20 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { TablaProductosComponent } from './components/tabla-productos/tabla-productos';
+import { DashboardLayoutComponent } from './components/dashboard-layout/dashboard-layout';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [TablaProductosComponent, DashboardLayoutComponent],
+  template: `
+    <h1>Taller 4 - victorerazo</h1>
+
+    <!-- Primera parte: tabla de productos -->
+    <app-tabla-productos></app-tabla-productos>
+
+    <!-- Segunda parte: dashboard -->
+    <app-dashboard-layout></app-dashboard-layout>
+  `,
+  styleUrls: ['./app.scss']
 })
-export class App {
-  protected readonly title = signal('victorerazo_taller4');
-}
+export class AppComponent {}
