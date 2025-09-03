@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { TablaProductosComponent } from '../tabla-productos/tabla-productos';
 
 @Component({
   selector: 'app-dashboard-layout',
-  imports: [],
+  standalone: true,
+  imports: [TablaProductosComponent],
   templateUrl: './dashboard-layout.html',
-  styleUrl: './dashboard-layout.scss'
+  styleUrls: ['./dashboard-layout.scss']
 })
-export class DashboardLayout {
-
-}
+export class DashboardLayoutComponent {}
